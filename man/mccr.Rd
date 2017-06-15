@@ -7,9 +7,9 @@
 mccr(act, pred)
 }
 \arguments{
-\item{act}{actual value 1 (positive), or 0 (negative)}
+\item{act}{actual values (vector), 1 (positive), or 0 (negative)}
 
-\item{pred}{predict value 1 (positive), or 0 (negative)}
+\item{pred}{predict values (vector), 1 (positive), or 0 (negative)}
 }
 \value{
 MCC score
@@ -21,6 +21,5 @@ Calculate the Matthews correlation coefficient (MCC) score
 set.seed(18)
 act <- abs(round(rnorm(100))) \%\% 2
 pred <- abs(round(rnorm(100))) \%\% 2
-score <- mccr(act, pred)
-
+mccr(act, pred)
 }
